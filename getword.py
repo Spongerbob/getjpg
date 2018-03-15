@@ -12,11 +12,11 @@ def getHtml(url):
 def getWord(html):
     #bs = BeautifulSoup(html, "lxml") #实例化对象
     bs = BeautifulSoup(html, "html.parser") #实例化对象
-    namelist = bs.findAll("li")
+    namelist = bs.findAll("a")
 
     return namelist
 
-url = "http://www.lzu.edu.cn/"
+url = "http://toutiao.sogou.com/guonei.html"
 html = getHtml(url)
 # bs = BeautifulSoup(html, "lxml")
 # namelist = bs.findAll("a")
